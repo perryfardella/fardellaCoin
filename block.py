@@ -2,8 +2,7 @@
 import datetime
 
 # print current date and time
-x = datetime.datetime.now()
-print(x)
+print(datetime.datetime.now())
 
 
 class Block:
