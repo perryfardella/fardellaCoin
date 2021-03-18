@@ -30,4 +30,4 @@ my_transaction = {
 }
 
 mempool = [transaction1, transaction2, transaction3,
-           transaction4, transaction5, transaction6]
+           transaction4, transaction5, transaction6, my_transaction]
