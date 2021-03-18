@@ -1,3 +1,4 @@
+# Python dictionary objects with key/value pairs to store the transaction data
 transaction1 = {
     'amount': '30',
     'sender': 'Alice',
@@ -22,6 +23,11 @@ transaction6 = {
     'amount': '400',
     'sender': 'Tiffany',
     'receiver': 'Xavier'}
+my_transaction = {
+    'amount': '400',
+    'sender': 'Xavier',
+    'receiver': 'Perry'
+}
 
 mempool = [transaction1, transaction2, transaction3,
            transaction4, transaction5, transaction6]
