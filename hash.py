@@ -3,7 +3,7 @@ from hashlib import sha256
 
 # text to hash
 text = "Welcome to fardellaCoin"
-hash_result = sha256(text.encode)
+hash_result = sha256(text.encode())
 
 # print result
-print(hash_result.hexdigest)
+print(hash_result.hexdigest())
