@@ -8,6 +8,7 @@ class Block:
         self.previous_hash = previous_hash
         self.nonce = nonce
         self.timestamp = datetime.now()
+        self.hash = self.generate_hash()
 
     def print_block(self):
         print("timestamp:", self.timestamp)
@@ -17,4 +18,7 @@ class Block:
     def generate_hash(self):
         block_contents = str(
             self.timestamp) + str(self.transactions) + str(self.nonce) + str(self.previous_hash)
-        return block_contents
+
+        block_hash = sha256(block_contents.encode())
+
+        return block_hash.hexdigest()
