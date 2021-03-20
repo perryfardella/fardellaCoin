@@ -4,7 +4,8 @@ from block import Block
 
 class Blockchain:
     def __init__(self):
-        pass
+        self.chain = []
+        self.all_transactions = []
 
     def genesis_block(self):
         pass
