@@ -30,11 +30,15 @@ class Blockchain:
         for i in range(1, len(self.chain)):
             current = self.chain[i]
             previous = self.chain[i-1]
+        if(current.hash != current.generate_hash()):
+            print(
+                "The current hash of the block does not equal the generated hash of the block.")
+            return False
+        if(current.previous_hash != previous.generate_hash()):
+            print(
+                "The previous block's hash does not equal the previous hash value stored in the current block.")
+            return False
+        return True
 
-            if current.hash != current.generate_hash():
-                return 0
-
-            if previous.hash != previous.generate_hash():
-                return 0
-
-        return 1
+    def proof_of_work(self, block, difficulty=2):
+        pass
