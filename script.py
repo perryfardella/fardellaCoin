@@ -37,10 +37,16 @@ mempool = [transaction1, transaction2, transaction3,
 new_transactions = [transaction1, transaction2, my_transaction]
 
 
-my_blockchain = Blockchain()
-my_blockchain.add_block(new_transactions)
-my_blockchain.print_blocks
+local_blockchain = Blockchain()
+# local_blockchain.print_blocks()
 
-my_blockchain.chain[1].transactions = 'fake_transactions'
+local_blockchain.add_block(mempool)
+local_blockchain.add_block(my_transaction)
+local_blockchain.validate_chain()
 
-print(my_blockchain.validate_chain())
+print('Messing with the chain...')
+local_blockchain.chain[2].transactions = {
+    'amount': '400',
+    'sender': 'Tiffany',
+    'receiver': 'Xavier'}
+local_blockchain.validate_chain()
