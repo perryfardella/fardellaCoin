@@ -1,3 +1,5 @@
+from blockchain import Blockchain
+
 # Python dictionary objects with key/value pairs to store the transaction data
 transaction1 = {
     'amount': '30',
@@ -32,4 +34,13 @@ my_transaction = {
 mempool = [transaction1, transaction2, transaction3,
            transaction4, transaction5, transaction6, my_transaction]
 
-block_transactions = [transaction1, transaction2, my_transaction]
+new_transactions = [transaction1, transaction2, my_transaction]
+
+
+my_blockchain = Blockchain()
+my_blockchain.add_block(new_transactions)
+my_blockchain.print_blocks
+
+my_blockchain.chain[1].transactions = 'fake_transactions'
+
+print(my_blockchain.validate_chain())
