@@ -9,3 +9,4 @@ class Blockchain:
 
     def genesis_block(self):
         genesis_block = Block([], 0)
+        self.chain.append(genesis_block)
