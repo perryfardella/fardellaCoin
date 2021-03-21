@@ -8,4 +8,4 @@ class Blockchain:
         self.all_transactions = []
 
     def genesis_block(self):
-        pass
+        genesis_block = Block([], 0)
