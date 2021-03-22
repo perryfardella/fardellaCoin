@@ -1,8 +1,9 @@
+# The purpose of this file is to test the blockchains functionality
+# import sha256
 from hashlib import sha256
 new_transactions = [{'amount': '30', 'sender': 'alice', 'receiver': 'bob'},
                     {'amount': '55', 'sender': 'bob', 'receiver': 'alice'}]
 
-# import sha256
 
 # sets the amount of leading zeros that must be found in the hash produced by the nonce
 difficulty = 2

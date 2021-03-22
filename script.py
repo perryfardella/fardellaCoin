@@ -1,3 +1,4 @@
+# The purpose of this file is to test the blockchains functionality
 from blockchain import Blockchain
 
 # Python dictionary objects with key/value pairs to store the transaction data
@@ -38,7 +39,8 @@ new_transactions = [transaction1, transaction2, my_transaction]
 
 
 local_blockchain = Blockchain()
-# local_blockchain.print_blocks()
+# print blocks to confirm the genesis block exists
+local_blockchain.print_blocks()
 
 local_blockchain.add_block(mempool)
 local_blockchain.add_block(my_transaction)
